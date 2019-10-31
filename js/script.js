@@ -3,8 +3,8 @@ $(document).ready(function(){
     localStorage.setItem( '1', JSON.stringify({ id: 1, name: "book 1", author: "author 1", count: 10 }));
     localStorage.setItem( '2', JSON.stringify({id: 2, name: "book 2", author: "author 2", count: 5}));
 
-    let book = JSON.parse( localStorage.getItem('1'));
-    // console.log(localStorage);
+    // let book = JSON.parse( localStorage.getItem('1'));
+    // console.log(book);
     // let tr = document.createElement('tr');
     // $('tr').append('<th>').attr('scope', 'row');
 
@@ -14,15 +14,36 @@ $(document).ready(function(){
     // }).appendTo('tr');
     // $('[scope="row"]').append('<td/>');
 
-
-
-    for (let i = 1; i <= localStorage.length; i++){
-        $("tbody").append("<tr>");
-        let temp = JSON.parse(localStorage.getItem(i));
-        $("#name").append(temp.name);
-
-
+    for (let i = 1; i <= localStorage.length; i++) {
+        let item = JSON.parse( localStorage.getItem(i));
+        $('tbody').append(
+            $('<tr>'),
+            $('<th>').text(item.id),
+            $('<td>').text(item.name),
+            $('<td>').text(item.author),
+            $('<td>').text(item.count),
+            $('<td>').append('<a>')
+            // $('a').href('#')
+        );
+        // $('td').append('<a>');
     }
+
+    // let td = $('tr').children('');
+    // td.each(function(index, elem) {
+    //     console.log(elem.innerHTML);
+    // });
+
+    // $(function() {
+    //     $.each(localStorage, function(i, item) {
+    //         var $tr = $('<tr>').append(
+    //             $('<td>').text(item.id),
+    //             $('<td>').text(item.name),
+    //             $('<td>').text(item.author),
+    //             $('<td>').text(item.count),
+    //         ); //.appendTo('#records_table');
+    //         console.log($tr.wrap('<p>').html());
+    //     });
+    // });
 
 
 

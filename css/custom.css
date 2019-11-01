@@ -71,3 +71,10 @@ body {
     background-color: white;
     border-radius: 50%;
 }
+
+
+/* Мои */
+
+td, th {
+    text-align: center;
+}

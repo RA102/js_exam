@@ -33,16 +33,16 @@ $(document).ready(function(){
                         ),
                         $('<div>').append(
                             $('<form>').append(
-                                $('<div>').attr({ 'class': 'form-group'}).append(
-                                    $('<label>').attr({'for': 'edit_id',}).text("Id"),
-                                    $('<input>').attr(
-                                        {
-                                            'id': 'edit_id',
-                                            'value': item.id,
-                                            'class': 'form-control',
-                                            'type': 'text'
-                                        }).css('width', 'min-content'),
-                                ),
+                                // $('<div>').attr({ 'class': 'form-group'}).append(
+                                //     $('<label>').attr({'for': 'edit_id',}).text("Id"),
+                                //     $('<input>').attr(
+                                //         {
+                                //             'id': 'edit_id',
+                                //             'value': item.id,
+                                //             'class': 'form-control',
+                                //             'type': 'text'
+                                //         }).css('width', 'min-content'),
+                                // ),
                                 $('<div>').attr({ 'class': 'form-group'}).append(
                                     $('<label>').attr({'for': 'edit_name',}).text("Name"),
                                     $('<input>').attr(
@@ -54,7 +54,7 @@ $(document).ready(function(){
                                         }).css('width', 'min-content'),
                                 ),
                                 $('<div>').attr({ 'class': 'form-group'}).append(
-                                    $('<label>').attr({'for': 'edit_name',}).text("Name"),
+                                    $('<label>').attr({'for': 'edit_author',}).text("Author"),
                                     $('<input>').attr(
                                         {
                                             'id': 'edit_author',
@@ -63,8 +63,18 @@ $(document).ready(function(){
                                             'type': 'text'
                                         }).css('width', 'min-content')
                                 ),
+                                $('<div>').attr({ 'class': 'form-group'}).append(
+                                    $('<label>').attr({'for': 'edit_count',}).text("Count"),
+                                    $('<input>').attr(
+                                        {
+                                            'id': 'edit_count',
+                                            'value': item.count,
+                                            'class': 'form-control',
+                                            'type': 'text'
+                                        }).css('width', 'min-content')
+                                ),
                                 $('<button>').attr({'type': 'submit', 'class': 'btn btn-primary' }).text("Save")
-                            ).attr({'method': 'post', 'id': 'modalForm', 'action'})
+                            ).attr({'method': 'post', 'id': 'modalForm'})
                         ).attr({'class': 'modal-body'})
                     )
                 )
